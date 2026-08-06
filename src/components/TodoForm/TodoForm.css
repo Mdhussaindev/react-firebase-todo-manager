@@ -1,0 +1,13 @@
+.todo-card {
+  margin: 30px 0;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1677ff;
+  font-size: 28px;
+  font-weight: 700;
+}

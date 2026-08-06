@@ -1,0 +1,54 @@
+/* Todo Table Container */
+
+.ant-table-wrapper {
+  margin-top: 30px;
+}
+
+/* Main Table */
+
+.ant-table {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+
+.ant-table-thead > tr > th {
+  background: #1677ff !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Body */
+
+.ant-table-tbody > tr > td {
+  font-size: 14px;
+}
+
+/* Hover Effect */
+
+.ant-table-tbody > tr:hover > td {
+  background: #f5f9ff !important;
+}
+
+/* Pagination */
+
+.ant-pagination {
+  margin-top: 20px !important;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .ant-table {
+    font-size: 12px;
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 10px !important;
+  }
+}

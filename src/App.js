@@ -1,11 +1,8 @@
-import { db } from "./firebase/firebaseConfig";
+import "antd/dist/reset.css";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div>
-      <h1>React Firebase Todo Manager</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
