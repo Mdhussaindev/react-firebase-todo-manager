@@ -1,3 +1,5 @@
+import { db } from "./firebase/firebaseConfig";
+
 function App() {
   return (
     <div>
