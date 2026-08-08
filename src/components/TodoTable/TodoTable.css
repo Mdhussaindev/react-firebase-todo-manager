@@ -1,7 +1,3 @@
-```css
-/* =========================================
-   TODO TABLE
-========================================= */
 
 .todo-table-wrapper {
   width: 100%;
@@ -11,9 +7,7 @@
   overflow: hidden;
 }
 
-/* =========================================
-   DESKTOP TABLE
-========================================= */
+
 
 .todo-table-wrapper .ant-table-wrapper {
   width: 100%;
@@ -28,7 +22,7 @@
   box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
 }
 
-/* Table Header */
+
 
 .todo-table-wrapper .ant-table-thead > tr > th {
   background: #1677ff !important;
@@ -40,7 +34,7 @@
   border: none !important;
 }
 
-/* Table Body */
+
 
 .todo-table-wrapper .ant-table-tbody > tr > td {
   text-align: center;
@@ -50,7 +44,7 @@
   border-bottom: 1px solid #eef2f7;
 }
 
-/* Row Hover */
+
 
 .todo-table-wrapper .ant-table-tbody > tr {
   transition: all 0.25s ease;
@@ -60,14 +54,14 @@
   background: #f0f7ff !important;
 }
 
-/* Title */
+
 
 .todo-table-wrapper .ant-table-tbody > tr > td:first-child {
   font-weight: 600;
   color: #1e293b;
 }
 
-/* Status Tags */
+
 
 .todo-table-wrapper .ant-tag {
   border-radius: 20px;
@@ -76,7 +70,7 @@
   border: none;
 }
 
-/* Buttons */
+
 
 .todo-table-wrapper .ant-btn {
   border-radius: 8px;
@@ -88,28 +82,25 @@
   transform: translateY(-2px);
 }
 
-/* Edit Button */
+
 
 .todo-table-wrapper .ant-btn-primary:hover {
   box-shadow: 0 6px 15px rgba(22, 119, 255, 0.25);
 }
 
-/* Delete Button */
 
 .todo-table-wrapper .ant-btn-dangerous:hover {
   box-shadow: 0 6px 15px rgba(255, 77, 79, 0.2);
 }
 
-/* Pagination */
+
 
 .todo-table-wrapper .ant-pagination {
   justify-content: center;
   margin: 22px 0 !important;
 }
 
-/* =========================================
-   TODO FORM CARD
-========================================= */
+
 
 .todo-card {
   width: 100%;
@@ -130,7 +121,7 @@
     0 18px 45px rgba(15, 23, 42, 0.12);
 }
 
-/* Form Title */
+
 
 .form-title {
   text-align: center;
@@ -140,7 +131,7 @@
   margin-bottom: 28px;
 }
 
-/* Inputs */
+
 
 .todo-card .ant-input,
 .todo-card .ant-input-affix-wrapper,
@@ -156,7 +147,7 @@
   box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.08);
 }
 
-/* Add Button */
+
 
 .todo-card .ant-btn-primary {
   border-radius: 9px;
@@ -170,9 +161,6 @@
   box-shadow: 0 8px 18px rgba(22, 119, 255, 0.25);
 }
 
-/* =========================================
-   MOBILE TODO CARDS
-========================================= */
 
 .mobile-todo-list {
   width: 100%;
@@ -209,7 +197,7 @@
     0 15px 35px rgba(15, 23, 42, 0.12);
 }
 
-/* Mobile Card Content */
+
 
 .mobile-todo-card h3 {
   margin: 0 0 8px;
@@ -235,15 +223,13 @@
   word-break: break-word;
 }
 
-/* Mobile Card Actions */
+
 
 .mobile-todo-card .ant-btn {
   border-radius: 8px;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+
 
 @media (max-width: 768px) {
   .todo-table-wrapper {
@@ -253,11 +239,6 @@
     overflow: hidden;
   }
 
-  /*
-     IMPORTANT:
-     Do NOT give the Ant Design table
-     any fixed/minimum width on mobile.
-  */
 
   .todo-table-wrapper .ant-table-wrapper,
   .todo-table-wrapper .ant-table-container {
@@ -298,9 +279,6 @@
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
 @media (max-width: 480px) {
   .todo-table-wrapper {
@@ -329,12 +307,7 @@
   }
 }
 
-```css
-/* =========================================
-   DESKTOP / MOBILE VISIBILITY
-========================================= */
 
-/* Desktop */
 .desktop-todo-table {
   display: block;
 }
@@ -343,9 +316,6 @@
   display: none;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 768px) {
 
@@ -448,10 +418,6 @@
     border-radius: 16px;
   }
 }
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
 @media (max-width: 480px) {
 
