@@ -1,19 +1,52 @@
-import React from "react";
-import { Form, Input, Select, Button, Card } from "antd";
-import { PlusOutlined } from "@ant-design/icons";
+import React, { useEffect } from "react";
+import {
+  Form,
+  Input,
+  Select,
+  Button,
+  Card,
+} from "antd";
+
+import {
+  PlusOutlined,
+  EditOutlined,
+  CloseOutlined,
+} from "@ant-design/icons";
 
 import "./TodoForm.css";
 
 const { TextArea } = Input;
 
-const TodoForm = ({ onAddTodo, loading }) => {
+const TodoForm = ({
+  onAddTodo,
+  loading,
+  editingTodo,
+  onCancelEdit,
+}) => {
   const [form] = Form.useForm();
+
+  useEffect(() => {
+    if (editingTodo) {
+      form.setFieldsValue({
+        title: editingTodo.title,
+        description: editingTodo.description,
+        status: editingTodo.status,
+      });
+    } else {
+      form.resetFields();
+
+      form.setFieldsValue({
+        status: "Pending",
+      });
+    }
+  }, [editingTodo, form]);
 
   const handleFinish = async (values) => {
     const success = await onAddTodo(values);
 
     if (success) {
       form.resetFields();
+
       form.setFieldsValue({
         status: "Pending",
       });
@@ -22,7 +55,10 @@ const TodoForm = ({ onAddTodo, loading }) => {
 
   return (
     <Card className="todo-card">
-      <h2 className="form-title">Add New Todo</h2>
+
+      <h2 className="form-title">
+        {editingTodo ? "Update Todo" : "Add New Todo"}
+      </h2>
 
       <Form
         form={form}
@@ -32,6 +68,7 @@ const TodoForm = ({ onAddTodo, loading }) => {
           status: "Pending",
         }}
       >
+
         <Form.Item
           label="Title"
           name="title"
@@ -83,12 +120,31 @@ const TodoForm = ({ onAddTodo, loading }) => {
           type="primary"
           htmlType="submit"
           size="large"
-          icon={<PlusOutlined />}
+          icon={
+            editingTodo ? (
+              <EditOutlined />
+            ) : (
+              <PlusOutlined />
+            )
+          }
           loading={loading}
           block
         >
-          Add Todo
+          {editingTodo ? "Update Todo" : "Add Todo"}
         </Button>
+
+        {editingTodo && (
+          <Button
+            size="large"
+            icon={<CloseOutlined />}
+            onClick={onCancelEdit}
+            block
+            style={{ marginTop: "10px" }}
+          >
+            Cancel Edit
+          </Button>
+        )}
+
       </Form>
     </Card>
   );

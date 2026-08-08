@@ -1,54 +1,335 @@
-/* Todo Table Container */
+/* =========================================
+   TODO TABLE
+========================================= */
 
-.ant-table-wrapper {
+.todo-table-wrapper {
+  width: 100%;
   margin-top: 30px;
 }
 
-/* Main Table */
+/* Table */
 
-.ant-table {
-  border-radius: 15px;
+.todo-table-wrapper .ant-table-wrapper {
+  width: 100%;
+}
+
+.todo-table-wrapper .ant-table {
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
 }
 
-/* Header */
+/* Table Header */
 
-.ant-table-thead > tr > th {
+.todo-table-wrapper .ant-table-thead > tr > th {
   background: #1677ff !important;
-  color: white !important;
-  font-weight: 600;
+  color: #ffffff !important;
+  text-align: center !important;
   font-size: 15px;
+  font-weight: 700;
+  padding: 17px 12px;
+  border: none !important;
 }
 
-/* Body */
+/* Table Body */
 
-.ant-table-tbody > tr > td {
+.todo-table-wrapper .ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 16px 12px;
+  color: #334155;
   font-size: 14px;
+  border-bottom: 1px solid #eef2f7;
 }
 
-/* Hover Effect */
+/* Row Hover */
 
-.ant-table-tbody > tr:hover > td {
-  background: #f5f9ff !important;
+.todo-table-wrapper .ant-table-tbody > tr {
+  transition: all 0.25s ease;
+}
+
+.todo-table-wrapper .ant-table-tbody > tr:hover > td {
+  background: #f0f7ff !important;
+}
+
+/* Title */
+
+.todo-table-wrapper .ant-table-tbody > tr > td:first-child {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Status Tags */
+
+.todo-table-wrapper .ant-tag {
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-weight: 600;
+  border: none;
+}
+
+/* Buttons */
+
+.todo-table-wrapper .ant-btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Edit Button Hover */
+
+.todo-table-wrapper .ant-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(22, 119, 255, 0.25);
+}
+
+/* Delete Button Hover */
+
+.todo-table-wrapper .ant-btn-dangerous:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 77, 79, 0.2);
 }
 
 /* Pagination */
 
-.ant-pagination {
-  margin-top: 20px !important;
-  text-align: center;
+.todo-table-wrapper .ant-pagination {
+  justify-content: center;
+  margin: 22px 0 !important;
 }
 
-/* Responsive */
+/* Premium Form Card */
+
+.todo-card {
+  border-radius: 20px !important;
+  border: none !important;
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.todo-card:hover {
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+/* Form Title */
+
+.form-title {
+  text-align: center;
+  color: #1677ff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+/* Inputs */
+
+.todo-card .ant-input,
+.todo-card .ant-input-affix-wrapper,
+.todo-card .ant-select-selector {
+  border-radius: 9px !important;
+  transition: all 0.25s ease;
+}
+
+.todo-card .ant-input:hover,
+.todo-card .ant-input:focus,
+.todo-card .ant-select:hover .ant-select-selector {
+  border-color: #1677ff !important;
+  box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.08);
+}
+
+/* Add Button */
+
+.todo-card .ant-btn-primary {
+  border-radius: 9px;
+  height: 46px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.todo-card .ant-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(22, 119, 255, 0.25);
+}
+
+/* =========================================
+   RESPONSIVE TABLE
+========================================= */
 
 @media (max-width: 768px) {
-  .ant-table {
+  .todo-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 15px;
+  }
+
+  .todo-table-wrapper .ant-table {
+    min-width: 650px;
+  }
+
+  .todo-table-wrapper .ant-table-container {
+    overflow-x: auto;
+  }
+
+  .todo-table-wrapper .ant-table-thead > tr > th,
+  .todo-table-wrapper .ant-table-tbody > tr > td {
+    padding: 12px 8px !important;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .todo-table-wrapper .ant-btn {
+    height: 34px;
+    padding: 0 10px;
     font-size: 12px;
   }
 
-  .ant-table-thead > tr > th,
-  .ant-table-tbody > tr > td {
-    padding: 10px !important;
+  .todo-table-wrapper .ant-tag {
+    font-size: 12px;
+    padding: 3px 9px;
+  }
+}
+
+.todo-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+/* Table */
+
+.todo-table-wrapper .ant-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.todo-table-wrapper .ant-table {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* Header */
+
+.todo-table-wrapper .ant-table-thead > tr > th {
+  background: #1677ff !important;
+  color: white !important;
+  text-align: center !important;
+  font-weight: 700;
+  padding: 16px 12px;
+}
+
+/* Body */
+
+.todo-table-wrapper .ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 16px 12px;
+}
+
+/* Hover */
+
+.todo-table-wrapper .ant-table-tbody > tr {
+  transition: 0.25s ease;
+}
+
+.todo-table-wrapper .ant-table-tbody > tr:hover > td {
+  background: #f0f7ff !important;
+}
+
+/* Buttons */
+
+.todo-table-wrapper .ant-btn {
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.todo-table-wrapper .ant-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Status */
+
+.todo-table-wrapper .ant-tag {
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 4px 12px;
+}
+
+/* Pagination */
+
+.todo-table-wrapper .ant-pagination {
+  justify-content: center;
+  margin: 20px 0 !important;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .todo-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .todo-table-wrapper .ant-table-wrapper {
+    width: 100%;
+  }
+
+  .todo-table-wrapper .ant-table-container {
+    overflow-x: auto !important;
+  }
+
+  .todo-table-wrapper .ant-table {
+    border-radius: 14px;
+  }
+
+  .todo-table-wrapper .ant-table-thead > tr > th,
+  .todo-table-wrapper .ant-table-tbody > tr > td {
+    padding: 12px 10px !important;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .todo-table-wrapper .ant-btn {
+    height: 34px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .todo-table-wrapper {
+    margin-top: 20px;
+  }
+
+  .todo-table-wrapper .ant-table-thead > tr > th,
+  .todo-table-wrapper .ant-table-tbody > tr > td {
+    padding: 10px 8px !important;
+    font-size: 12px;
+  }
+
+  .todo-table-wrapper .ant-btn {
+    height: 32px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .todo-table-wrapper .ant-tag {
+    padding: 3px 8px;
+    font-size: 11px;
   }
 }

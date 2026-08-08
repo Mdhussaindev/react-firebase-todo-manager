@@ -1,3 +1,6 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBdTeD24PV2DY6PktKgVPEvFDTVk5jKqLo",
   authDomain: "react-firebase-todo-manager.firebaseapp.com",
@@ -6,3 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "494349275619",
   appId: "1:494349275619:web:bc14055259cf8548fc10d6"
 };
+
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);

@@ -1,24 +1,90 @@
-.home{
-    min-height:100vh;
-    background:#f5f7fb;
-    padding:40px 70px;
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home {
+  min-height: 100vh;
+  padding: 40px 5%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(22, 119, 255, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(99, 102, 241, 0.10),
+      transparent 35%
+    ),
+    #f4f7fb;
 }
 
-.hero{
-    background:linear-gradient(135deg,#1677ff,#4096ff);
-    color:white;
-    border-radius:18px;
-    padding:35px;
-    margin-bottom:35px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  padding: 38px 34px;
+  margin-bottom: 32px;
+
+  background: linear-gradient(
+    135deg,
+    #1677ff,
+    #4f8df7
+  );
+
+  border-radius: 20px;
+
+  color: white;
+
+  box-shadow:
+    0 18px 40px rgba(22, 119, 255, 0.20);
+
+  transition: all 0.3s ease;
 }
 
-.hero h1{
-    font-size:36px;
-    margin-bottom:10px;
+.hero:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 22px 45px rgba(22, 119, 255, 0.28);
 }
 
-.hero p{
-    opacity:.95;
-    font-size:17px;
+.hero h1 {
+  margin: 0 0 8px;
+
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  margin: 0;
+
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .home {
+    padding: 20px 15px;
+  }
+
+  .hero {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
 }
