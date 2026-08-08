@@ -1,19 +1,27 @@
+```css
 /* =========================================
    TODO TABLE
 ========================================= */
 
 .todo-table-wrapper {
   width: 100%;
+  max-width: 100%;
   margin-top: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Table */
+/* =========================================
+   DESKTOP TABLE
+========================================= */
 
 .todo-table-wrapper .ant-table-wrapper {
   width: 100%;
+  max-width: 100%;
 }
 
 .todo-table-wrapper .ant-table {
+  width: 100%;
   border-radius: 18px;
   overflow: hidden;
   background: #ffffff;
@@ -76,17 +84,19 @@
   transition: all 0.25s ease;
 }
 
-/* Edit Button Hover */
+.todo-table-wrapper .ant-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Edit Button */
 
 .todo-table-wrapper .ant-btn-primary:hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(22, 119, 255, 0.25);
 }
 
-/* Delete Button Hover */
+/* Delete Button */
 
 .todo-table-wrapper .ant-btn-dangerous:hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(255, 77, 79, 0.2);
 }
 
@@ -97,9 +107,15 @@
   margin: 22px 0 !important;
 }
 
-/* Premium Form Card */
+/* =========================================
+   TODO FORM CARD
+========================================= */
 
 .todo-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
   border-radius: 20px !important;
   border: none !important;
 
@@ -155,147 +171,110 @@
 }
 
 /* =========================================
-   RESPONSIVE TABLE
+   MOBILE TODO CARDS
+========================================= */
+
+.mobile-todo-list {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-todo-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 18px;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 28px rgba(15, 23, 42, 0.08);
+
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+.mobile-todo-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* Mobile Card Content */
+
+.mobile-todo-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e293b;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.mobile-todo-card p {
+  margin: 6px 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #64748b;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Mobile Card Actions */
+
+.mobile-todo-card .ant-btn {
+  border-radius: 8px;
+}
+
+/* =========================================
+   MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
   .todo-table-wrapper {
     width: 100%;
-    overflow-x: auto;
-    border-radius: 15px;
-  }
-
-  .todo-table-wrapper .ant-table {
-    min-width: 650px;
-  }
-
-  .todo-table-wrapper .ant-table-container {
-    overflow-x: auto;
-  }
-
-  .todo-table-wrapper .ant-table-thead > tr > th,
-  .todo-table-wrapper .ant-table-tbody > tr > td {
-    padding: 12px 8px !important;
-    font-size: 13px;
-    white-space: nowrap;
-  }
-
-  .todo-table-wrapper .ant-btn {
-    height: 34px;
-    padding: 0 10px;
-    font-size: 12px;
-  }
-
-  .todo-table-wrapper .ant-tag {
-    font-size: 12px;
-    padding: 3px 9px;
-  }
-}
-
-.todo-table-wrapper {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 30px;
-  overflow: hidden;
-}
-
-/* Table */
-
-.todo-table-wrapper .ant-table-wrapper {
-  width: 100%;
-  max-width: 100%;
-}
-
-.todo-table-wrapper .ant-table {
-  border-radius: 18px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
-}
-
-/* Header */
-
-.todo-table-wrapper .ant-table-thead > tr > th {
-  background: #1677ff !important;
-  color: white !important;
-  text-align: center !important;
-  font-weight: 700;
-  padding: 16px 12px;
-}
-
-/* Body */
-
-.todo-table-wrapper .ant-table-tbody > tr > td {
-  text-align: center;
-  padding: 16px 12px;
-}
-
-/* Hover */
-
-.todo-table-wrapper .ant-table-tbody > tr {
-  transition: 0.25s ease;
-}
-
-.todo-table-wrapper .ant-table-tbody > tr:hover > td {
-  background: #f0f7ff !important;
-}
-
-/* Buttons */
-
-.todo-table-wrapper .ant-btn {
-  border-radius: 8px;
-  transition: 0.25s ease;
-}
-
-.todo-table-wrapper .ant-btn:hover {
-  transform: translateY(-2px);
-}
-
-/* Status */
-
-.todo-table-wrapper .ant-tag {
-  border-radius: 20px;
-  font-weight: 600;
-  padding: 4px 12px;
-}
-
-/* Pagination */
-
-.todo-table-wrapper .ant-pagination {
-  justify-content: center;
-  margin: 20px 0 !important;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-  .todo-table-wrapper {
-    width: 100%;
     max-width: 100%;
+    margin-top: 20px;
     overflow: hidden;
   }
 
-  .todo-table-wrapper .ant-table-wrapper {
-    width: 100%;
-  }
+  /*
+     IMPORTANT:
+     Do NOT give the Ant Design table
+     any fixed/minimum width on mobile.
+  */
 
+  .todo-table-wrapper .ant-table-wrapper,
   .todo-table-wrapper .ant-table-container {
-    overflow-x: auto !important;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden !important;
   }
 
   .todo-table-wrapper .ant-table {
-    border-radius: 14px;
+    width: 100%;
+    min-width: 0 !important;
   }
 
   .todo-table-wrapper .ant-table-thead > tr > th,
   .todo-table-wrapper .ant-table-tbody > tr > td {
-    padding: 12px 10px !important;
+    padding: 11px 8px !important;
     font-size: 13px;
-    white-space: nowrap;
   }
 
   .todo-table-wrapper .ant-btn {
@@ -303,33 +282,199 @@
     padding: 0 10px;
     font-size: 12px;
   }
-}
 
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-
-  .todo-table-wrapper {
-    margin-top: 20px;
-  }
-
-  .todo-table-wrapper .ant-table-thead > tr > th,
-  .todo-table-wrapper .ant-table-tbody > tr > td {
-    padding: 10px 8px !important;
+  .todo-table-wrapper .ant-tag {
+    padding: 3px 9px;
     font-size: 12px;
   }
 
-  .todo-table-wrapper .ant-btn {
-    height: 32px;
-    padding: 0 8px;
-    font-size: 11px;
+  .todo-card {
+    border-radius: 16px !important;
   }
 
-  .todo-table-wrapper .ant-tag {
-    padding: 3px 8px;
-    font-size: 11px;
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 22px;
   }
 }
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .todo-table-wrapper {
+    margin-top: 16px;
+  }
+
+  .mobile-todo-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .mobile-todo-card h3 {
+    font-size: 16px;
+  }
+
+  .mobile-todo-card p {
+    font-size: 13px;
+  }
+
+  .todo-card {
+    border-radius: 14px !important;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+}
+
+```css
+/* =========================================
+   DESKTOP / MOBILE VISIBILITY
+========================================= */
+
+/* Desktop */
+.desktop-todo-table {
+  display: block;
+}
+
+.mobile-todo-list {
+  display: none;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .desktop-todo-table {
+    display: none !important;
+  }
+
+  .mobile-todo-list {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    gap: 16px;
+
+    overflow: hidden;
+  }
+
+  .mobile-todo-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px;
+
+    background: #ffffff;
+    border-radius: 16px;
+
+    box-shadow:
+      0 10px 28px rgba(15, 23, 42, 0.08);
+
+    overflow: hidden;
+  }
+
+  .mobile-card-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+
+    box-sizing: border-box;
+  }
+
+  .mobile-card-header h3 {
+    margin: 0;
+
+    flex: 1;
+    min-width: 0;
+
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .mobile-card-header .ant-tag {
+    flex-shrink: 0;
+  }
+
+  .mobile-description {
+    margin: 12px 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .mobile-card-actions {
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+
+    box-sizing: border-box;
+  }
+
+  .mobile-card-actions .ant-btn {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .mobile-loading,
+  .mobile-empty {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 30px 15px;
+
+    text-align: center;
+    color: #64748b;
+
+    background: #ffffff;
+    border-radius: 16px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .mobile-todo-card {
+    padding: 15px;
+  }
+
+  .mobile-card-header h3 {
+    font-size: 16px;
+  }
+
+  .mobile-description {
+    font-size: 13px;
+  }
+
+  .mobile-card-actions {
+    gap: 8px;
+  }
+
+  .mobile-card-actions .ant-btn {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
+
